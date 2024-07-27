@@ -1,11 +1,16 @@
-const edad = parseInt(prompt("Ingrese su edad"));
+/* 6- Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma :
+1
+22
+333
+4444
+55555
+666666
+…….
+*/
+for(let contador = 1; contador <= 30 ; contador++){
+    for (let repeticiones = 0; repeticiones < contador; repeticiones++) {
+        document.write(contador);
+    }
+    document.write("<br>")
+}
 
-if (edad > 0 && edad < 120 ) {
-    if(edad > 18){
-        document.write(`<p> Tu edad es ${edad}, puedes conducir </p>`) 
-    } else{
-        document.write(`<p> Tu edad es ${edad}, no puedes conducir </p>`) 
-    }
-    } else{
-        document.write(`<p> Ingrese una edad válida </p>`) 
-    }
