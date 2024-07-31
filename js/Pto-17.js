@@ -1,17 +1,19 @@
-let numrep = parseInt(prompt("Ingrese el numero de repeticiones entre 1 y 50"));
-//verificar si se ingreso un numero
-if (!isNaN(numrep)) {
-    //verificar si el numero esta entre 1 y 50
-    if (numrep >= 1 && numrep <= 50) {
-        for (let i = 0; i <= numrep; i++) {
-            for (let rep = 1; rep <= i; rep++) {
-                document.write(rep);
+/*17- Realiza un script que muestre la posición de la primera vocal de un texto
+introducido por teclado.*/
+let posicion
+let contador = 0
+const texto = prompt("Ingrese un texto de 100 caracteres");
+    if (texto.length >= 1 && texto.length <= 100) {
+        for (let index = 0; index < texto.length; index++) {
+            vocal = texto.charAt(index) 
+           if(vocal== "a" && contador == index || vocal =="e" && contador == index || vocal =="i" && contador == index || vocal == "o" && contador == index || vocal == "u" && contador == index){
+            posicion = index + 1       
+            contador --;
             }
-            document.write("<br>");
+            contador ++;
         }
+        document.write(`<p>La posicion de la primera vocal del texto es: ${posicion}</p> <br>`)
+        document.write(`<p>texto ingresado: ${texto}</p>`)
     } else {
-        alert("El número introducido no es válido");
+        alert("Error! ingrese menos caracteres");
     }
-} else {
-    alert("valor erroneo");
-}
