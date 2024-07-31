@@ -1,4 +1,4 @@
-let texto = prompt("Ingrese un texto de 20 caracteres");
+const texto = prompt("Ingrese un texto de 20 caracteres");
     if (texto.length >= 1 && texto.length <= 20) {
         for (let i = 0; i < texto.length; i++) {
             document.write(`${texto.charAt(i)}`);
